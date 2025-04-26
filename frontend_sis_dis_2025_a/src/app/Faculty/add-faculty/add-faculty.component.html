@@ -1,0 +1,42 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Facultad</h3>
+        </div>
+        <div class="card-body">
+            <form >
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="faculty.name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Descripcion</label>
+                    <input type="text" class="form-control" [(ngModel)]="faculty.description" name="description">
+                </div>
+               
+                <div class="form-group">
+                    <label>
+                      <input type="checkbox" [(ngModel)]="faculty.status" name="status">
+                      Activa
+                    </label>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="campus">Sede</label>
+                    <select [(ngModel)]="faculty.campusId" name="campusId" required>
+                      <option [ngValue]="null" disabled selected>Seleccione un campus</option>
+                      <option *ngFor="let campus of campuses" [ngValue]="campus.id">
+                        {{ campus.name }}
+                      </option>
+                    </select>
+                  </div>
+                <button type="button" (click)="GuardarFaculty(faculty)" class="btn btn-danger"  >Guardar</button>
+            </form>
+
+            <div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+

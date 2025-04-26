@@ -1,0 +1,34 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Sede</h3>
+        </div>
+        <div class="card-body">
+            <form >
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="campus.name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Direccion</label>
+                    <input type="text" class="form-control" [(ngModel)]="campus.address" name="address">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono</label>
+                    <input type="text" class="form-control" [(ngModel)]="campus.phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label>
+                      <input type="checkbox" [(ngModel)]="campus.status" name="status">
+                      Activa
+                    </label>
+                  </div>
+                <button type="button" (click)="GuardarCampus(campus)" class="btn btn-danger"  >Guardar</button>
+            </form>
+
+            <div>
+               
+            </div>
+        </div>
+    </div>
+</div>
