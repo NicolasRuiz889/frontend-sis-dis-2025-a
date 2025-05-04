@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Campus } from '../../Modelo/Campus';
 import { CampusService } from '../../Service/campus.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-edit-campus',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterModule],
   templateUrl: './edit-campus.component.html',
   styleUrl: './edit-campus.component.css'
 })

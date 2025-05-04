@@ -9,9 +9,12 @@ import { AddFacultyComponent } from './Faculty/add-faculty/add-faculty.component
 import { ListarProgramComponent } from './Program/listar-program/listar-program.component';
 import { AddProgramComponent } from './Program/add-program/add-program.component';
 import { EditProgramComponent } from './Program/edit-program/edit-program.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 export const routes: Routes = [
+
+    { path: '', component: MenuComponent },
 
     //Campus
     {path: 'listarcampus', component:ListarCampusComponent},

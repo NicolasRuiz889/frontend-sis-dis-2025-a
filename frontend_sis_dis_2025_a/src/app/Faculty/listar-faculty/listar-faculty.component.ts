@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Faculty } from '../../Modelo/Faculty';
 import { FacultyService } from '../../Service/faculty.service';
 
 @Component({
   standalone: true,
   selector: 'app-listar-faculty',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './listar-faculty.component.html',
   styleUrl: './listar-faculty.component.css'
 })

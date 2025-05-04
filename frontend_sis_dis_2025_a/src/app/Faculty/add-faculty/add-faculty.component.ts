@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Faculty } from '../../Modelo/Faculty';
 import { FacultyService } from '../../Service/faculty.service';
 import { Campus } from '../../Modelo/Campus';
@@ -10,7 +10,7 @@ import { CampusService } from '../../Service/campus.service';
 @Component({
   selector: 'app-add-faculty',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './add-faculty.component.html',
   styleUrl: './add-faculty.component.css'
 })

@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { Campus } from '../../Modelo/Campus';
 import { Router } from '@angular/router';
 import { CampusService } from '../../Service/campus.service';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-add-campus',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './add-campus.component.html',
   styleUrl: './add-campus.component.css'
 })

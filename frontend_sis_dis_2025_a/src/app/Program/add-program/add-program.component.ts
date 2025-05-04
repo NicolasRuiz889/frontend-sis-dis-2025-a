@@ -1,7 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Faculty } from '../../Modelo/Faculty';
 import { FacultyService } from '../../Service/faculty.service';
 import { ProgramService } from '../../Service/program.service';
@@ -10,7 +10,7 @@ import { Program } from '../../Modelo/Program';
 @Component({
   selector: 'app-add-program',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './add-program.component.html',
   styleUrl: './add-program.component.css'
 })

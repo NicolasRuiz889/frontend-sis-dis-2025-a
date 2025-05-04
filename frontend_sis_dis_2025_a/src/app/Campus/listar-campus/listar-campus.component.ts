@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 import { CampusService } from '../../Service/campus.service';
 import { Campus } from '../../Modelo/Campus';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-listar-campus',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './listar-campus.component.html',
   styleUrls: ['./listar-campus.component.css']
 })

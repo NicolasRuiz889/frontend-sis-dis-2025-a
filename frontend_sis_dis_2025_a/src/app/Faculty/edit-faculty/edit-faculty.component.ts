@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Faculty } from '../../Modelo/Faculty';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FacultyService } from '../../Service/faculty.service';
 import { Campus } from '../../Modelo/Campus';
 import { CampusService } from '../../Service/campus.service';
 
 @Component({
   selector: 'app-edit-faculty',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './edit-faculty.component.html',
   styleUrl: './edit-faculty.component.css'
 })

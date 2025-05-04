@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Program } from '../../Modelo/Program';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ProgramService } from '../../Service/program.service';
 
 @Component({
   standalone: true,
   selector: 'app-listar-program',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './listar-program.component.html',
   styleUrl: './listar-program.component.css'
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router , RouterModule} from '@angular/router';
 import { Program } from '../../Modelo/Program';
 import { Faculty } from '../../Modelo/Faculty';
 import { ProgramService } from '../../Service/program.service';
@@ -9,7 +9,7 @@ import { FacultyService } from '../../Service/faculty.service';
 
 @Component({
   selector: 'app-edit-program',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './edit-program.component.html',
   styleUrl: './edit-program.component.css'
 })

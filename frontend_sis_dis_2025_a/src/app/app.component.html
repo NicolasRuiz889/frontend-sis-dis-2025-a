@@ -1,22 +1,9 @@
 
-<div style="text-align: center;">
-  <h1>Bienvenidos</h1>
-</div>
-<div class="container">
 
-  <button (click)="nuevoCampus()" class="btn btn-info">Registrar Sede</button>
+<app-header></app-header>
 
-  <button (click)="listarCampus()" class="btn btn-info" style="margin-left: 10px;">Mostrar datos de la sede</button>
-
-  <button (click)="nuevoFaculty()" class="btn btn-info">Registrar Facultad</button>
-
-  <button (click)="listarFaculty()" class="btn btn-info" style="margin-left: 10px;">Mostrar datos de la Facultad</button>
-
-  <button (click)="nuevoProgram()" class="btn btn-info"> Registrar Programa </button>
-
-  <button (click)="listarProgram()" class="btn btn-info" style="margin-left: 10px;">Mostrar datos del Programa</button>
-
-
-
-
+<div class="main-content">
 <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
