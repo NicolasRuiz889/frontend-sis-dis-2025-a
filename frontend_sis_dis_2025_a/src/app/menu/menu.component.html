@@ -1,0 +1,240 @@
+<!--<div style="text-align: center;">
+  <h1>Bienvenidos</h1>
+</div>
+<div class="container"> -->
+
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-person-add fs-1"></i>
+          </div>
+          <h5 class="card-title">Persona</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-calendar-event-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Actividad</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-bank fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Facultad</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn" (click)="nuevoFaculty()">Crear</button>
+            <button class="custom-link-btn" (click)="listarFaculty()">Listar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-clipboard2-check-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Programa</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn" (click)="nuevoProgram()">Crear</button>
+            <button class="custom-link-btn" (click)="listarProgram()">Listar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-geo-alt-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Sede</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn" (click)="nuevoCampus()">Crear</button>
+            <button class="custom-link-btn" (click)="listarCampus()">Listar</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-person-gear fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Roles</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-journal-bookmark-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Asignatura</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-people-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Grupo</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-clock-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Horario</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<br>
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-tags-fill fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Categoria</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi  bi-list-ul fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Subcategoria Actividad</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-journal-check fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Agenda</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <div class="container mt-4">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow rounded-4">
+          <div class="card-icon mb-2">
+            <i class="bi bi-person-badge fs-1"></i>
+          </div>
+          <h5 class="card-title mb-3">Tipo de vinculacion</h5>
+
+          <div class="d-flex justify-content-center gap-4">
+            <button class="custom-link-btn">Crear</button>
+            <button class="custom-link-btn">Listar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
