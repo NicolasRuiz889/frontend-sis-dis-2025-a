@@ -59,4 +59,11 @@ export class MenuComponent {
   listarClass(){
     this.router.navigate(["listarclassorientation"]);
   }
+
+  nuevoCategory(){
+    this.router.navigate(["addcategory"]);
+  }
+  listarCategory(){
+    this.router.navigate(["listarcategory"]);
+  }
 }

@@ -19,6 +19,9 @@ import { EditGroupComponent } from './Group/edit-group/edit-group.component';
 import { ListarClassOrientationComponent } from './ClassOrientation/listar-class-orientation/listar-class-orientation.component';
 import { AddClassOrientationComponent } from './ClassOrientation/add-class-orientation/add-class-orientation.component';
 import { EditClassOrientationComponent } from './ClassOrientation/edit-class-orientation/edit-class-orientation.component';
+import { ListarCategoryComponent } from './Category/listar-category/listar-category.component';
+import { AddCategoryComponent } from './Category/add-category/add-category.component';
+import { EditCategoryComponent } from './Category/edit-category/edit-category.component';
 
 
 export const routes: Routes = [
@@ -54,6 +57,11 @@ export const routes: Routes = [
     {path: 'listarclassorientation', component:ListarClassOrientationComponent},
     {path: 'addclassorientation', component:AddClassOrientationComponent},
     {path:'editclassorientation', component:EditClassOrientationComponent},
+
+    //Category
+    {path: 'listarcategory', component:ListarCategoryComponent},
+    {path: 'addcategory', component:AddCategoryComponent},
+    {path:'editcategory', component:EditCategoryComponent},
     
 
 
