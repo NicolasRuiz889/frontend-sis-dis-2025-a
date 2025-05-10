@@ -10,6 +10,15 @@ import { ListarProgramComponent } from './Program/listar-program/listar-program.
 import { AddProgramComponent } from './Program/add-program/add-program.component';
 import { EditProgramComponent } from './Program/edit-program/edit-program.component';
 import { MenuComponent } from './menu/menu.component';
+import { ListarSubjectComponent } from './Subject/listar-subject/listar-subject.component';
+import { AddSubjectComponent } from './Subject/add-subject/add-subject.component';
+import { EditSubjectComponent } from './Subject/edit-subject/edit-subject.component';
+import { ListarGroupComponent } from './Group/listar-group/listar-group.component';
+import { AddGroupComponent } from './Group/add-group/add-group.component';
+import { EditGroupComponent } from './Group/edit-group/edit-group.component';
+import { ListarClassOrientationComponent } from './ClassOrientation/listar-class-orientation/listar-class-orientation.component';
+import { AddClassOrientationComponent } from './ClassOrientation/add-class-orientation/add-class-orientation.component';
+import { EditClassOrientationComponent } from './ClassOrientation/edit-class-orientation/edit-class-orientation.component';
 
 
 export const routes: Routes = [
@@ -29,7 +38,24 @@ export const routes: Routes = [
     //Program
     {path: 'listarprogram', component:ListarProgramComponent},
     {path: 'addprogram', component:AddProgramComponent},
-    {path:'editprogram', component:EditProgramComponent}
+    {path:'editprogram', component:EditProgramComponent},
+
+    //Subject
+    {path: 'listarsubject', component:ListarSubjectComponent},
+    {path: 'addsubject', component:AddSubjectComponent},
+    {path:'editsubject', component:EditSubjectComponent},
+
+    //Group
+    {path: 'listargroup', component:ListarGroupComponent},
+    {path: 'addgroup', component:AddGroupComponent},
+    {path:'editgroup', component:EditGroupComponent},
+
+    //ClassOrientation
+    {path: 'listarclassorientation', component:ListarClassOrientationComponent},
+    {path: 'addclassorientation', component:AddClassOrientationComponent},
+    {path:'editclassorientation', component:EditClassOrientationComponent},
+    
+
 
 
 ];

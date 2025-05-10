@@ -8,6 +8,7 @@ import { ProgramService } from '../../Service/program.service';
 import { FacultyService } from '../../Service/faculty.service';
 
 @Component({
+  standalone: true,
   selector: 'app-edit-program',
   imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './edit-program.component.html',
@@ -30,7 +31,7 @@ export class EditProgramComponent implements OnInit {
         
     }
   
-    // Método para cargar las sedes desde la API
+    // Método para cargar los programas desde la API
     loadFaculties(): void {
       this.facultyService.getFaculties().subscribe(
         (data) => {

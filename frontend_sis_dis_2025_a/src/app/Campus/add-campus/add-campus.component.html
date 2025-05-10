@@ -1,5 +1,5 @@
-<br>
-<div class="container col-md-6">
+
+<div class="container col-md-6 mt-5">
     <div class="card">
         <div class="card-header">
             <h3>Agregar Sede</h3>
@@ -18,13 +18,13 @@
                     <label for="">Telefono</label>
                     <input type="text" class="form-control" [(ngModel)]="campus.phone" name="phone">
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label>
                         <input type="checkbox" [(ngModel)]="campus.status" name="status">
                         Activa
                     </label>
                 </div>
-                <button type="button" (click)="GuardarCampus(campus)" class="btn btn-danger">Guardar</button>
+                <button type="button" (click)="GuardarCampus(campus)" class="btn btn-success">Guardar</button>
             </form>
 
             <div>

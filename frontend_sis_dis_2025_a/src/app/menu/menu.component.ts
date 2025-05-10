@@ -38,4 +38,25 @@ export class MenuComponent {
   listarProgram(){
     this.router.navigate(["listarprogram"]);
   }
+
+  nuevoSubject(){
+    this.router.navigate(["addsubject"]);
+  }
+  listarSubject(){
+    this.router.navigate(["listarsubject"]);
+  }
+
+  nuevoGroup(){
+    this.router.navigate(["addgroup"]);
+  }
+  listarGroup(){
+    this.router.navigate(["listargroup"]);
+  }
+
+  nuevoClass(){
+    this.router.navigate(["addclassorientation"]);
+  }
+  listarClass(){
+    this.router.navigate(["listarclassorientation"]);
+  }
 }

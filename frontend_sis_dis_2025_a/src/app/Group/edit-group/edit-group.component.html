@@ -1,0 +1,46 @@
+<div class="container col-md-6 mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Grupo</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="">Codigo</label>
+                    <input type="text" class="form-control" [(ngModel)]="group.code" name="code">
+                </div>
+                <div class="form-group">
+                    <label for="">Periodo</label>
+                    <input type="text" class="form-control" [(ngModel)]="group.period" name="period">
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="group.status" name="status">
+                        Activa
+                    </label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="campus">Asignatura</label>
+                    <select [(ngModel)]="group.subjectId" name="subjectId" required>
+                        <option [ngValue]="null" disabled selected>Seleccione una Asignatura</option>
+                        <option *ngFor="let subject of subjects" [ngValue]="subject.id">
+                            {{ subject.name }}
+                        </option>
+                    </select>
+                </div>
+                <button type="button" (click)="ActualizarGroup(group)" class="btn btn-success">Guardar</button>
+            </form>
+
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-4">
+        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
+
+    </div>
+</div>

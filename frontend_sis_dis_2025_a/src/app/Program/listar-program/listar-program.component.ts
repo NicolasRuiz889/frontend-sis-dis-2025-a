@@ -23,7 +23,7 @@ export class ListarProgramComponent implements OnInit{
       this.programs=data;
     },
     (error) => {
-      console.error('Error al cargar las facultades', error);
+      console.error('Error al cargar los programas', error);
     });
 
 
@@ -33,8 +33,8 @@ export class ListarProgramComponent implements OnInit{
       localStorage.setItem("id", program.id.toString());
       this.router.navigate(["editprogram"]);
     } else {
-      alert("El campus no tiene un ID definido. No se puede editar.");
-      console.warn("Campus sin ID:", program);
+      alert("El programa no tiene un ID definido. No se puede editar.");
+      console.warn("Programa sin ID:", program);
     }
 
   }
@@ -43,7 +43,7 @@ export class ListarProgramComponent implements OnInit{
     this.service.deleteProgram(program)
     .subscribe(data=>{
       this.programs=this.programs.filter(f=>f!==program);
-      alert("Sede eliminada...");
+      alert("Programa eliminado...");
     })
 
 
