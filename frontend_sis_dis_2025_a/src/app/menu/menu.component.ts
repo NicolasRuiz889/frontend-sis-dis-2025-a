@@ -66,4 +66,27 @@ export class MenuComponent {
   listarCategory(){
     this.router.navigate(["listarcategory"]);
   }
+
+
+  nuevoSubcategory(){
+    this.router.navigate(["addsubcategory"]);
+  }
+  listarSubcategory(){
+    this.router.navigate(["listarsubcategory"]);
+  }
+
+  
+  nuevoActivity(){
+    this.router.navigate(["addactivity"]);
+  }
+  listarActivity(){
+    this.router.navigate(["listaractivity"]);
+  }
+
+  nuevoActivityCatalog(){
+    this.router.navigate(["addactivitycatalog"]);
+  }
+  listarActivityCatalog(){
+    this.router.navigate(["listaractivitycatalog"]);
+  }
 }

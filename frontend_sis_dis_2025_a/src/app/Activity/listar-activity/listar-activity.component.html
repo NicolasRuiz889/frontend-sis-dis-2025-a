@@ -1,0 +1,56 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>ACTIVIDADES</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>NOMBRE ACTIVIDAD</th>
+                        <th>DEDICACIÓN (HORAS SEMANALES)</th>
+                        <th>DEDICACIÓN (HORAS SEMESTRE)</th>
+                        <th>DESCRIPCIÓN DE LA ACTIVIDAD</th>
+                        <th>PRODUCTO</th>
+                        <th>ESTADO</th>
+                        <th>SUBCATEGORIA</th>
+                        <th>ACCIONES</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let activity of activity" class="text-center">
+                        <td>{{ activity.activityCatalogName }}</td>
+                        <td>{{ activity.weeklyHours }}</td>
+                        <td>{{ activity.semesterHours }}</td>
+                        <td>{{ activity.description }}</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li *ngFor="let prod of activity.product">
+                                   <i class="bi bi-check"></i> {{ prod.name }}
+                                </li>
+                            </ul>
+                        </td>
+                        <td>{{ activity.status }}</td>
+                        <td>{{ activity.subcategoryName }}</td>
+
+
+                        <td>
+                            <div class="d-flex justify-content-center gap-1">
+                                <button (click)="editarActivity(activity)"
+                                    class="btn btn-primary d-inline-flex align-items-center"><i
+                                        class="bi bi-pencil-square me-2"></i>Editar</button>
+                                <button (click)="deleteActivity(activity)"
+                                    class="btn btn-danger d-inline-flex align-items-center" style="margin-left: 10px;">
+                                    <i class="bi bi-trash me-2"></i>Eliminar</button>
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center gap-4">
+        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
+    </div>

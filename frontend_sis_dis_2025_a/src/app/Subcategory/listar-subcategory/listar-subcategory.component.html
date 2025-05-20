@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>SUBCATEGORIAS</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>DESCRIPCION</th>
+                        <th>ESTADO</th>
+                        <th>CATEGORIA</th>
+                        <th>ACCIONES</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subcategory of subcategories" class="text-center">
+                        <td>{{subcategory.id}}</td>
+                        <td>{{subcategory.name}}</td>
+                        <td>{{subcategory.description}}</td>    
+                        <td>{{subcategory.status ? 'Activo' : 'Inactivo'}}</td>
+                        <td>{{subcategory.categoryId}}</td>
+                        <td>
+                            <button (click)="editarSubcategory(subcategory)" class="btn btn-primary"><i
+                                    class="bi bi-pencil-square me-2"></i>Editar</button>
+                            <button (click)="deleteSubcategory(subcategory)" class="btn btn-danger" style="margin-left: 10px;">
+                                <i class="bi bi-trash me-2"></i>Eliminar</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center gap-4">
+        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
+
+    </div>
+</div>

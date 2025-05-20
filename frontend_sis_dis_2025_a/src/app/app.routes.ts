@@ -22,11 +22,22 @@ import { EditClassOrientationComponent } from './ClassOrientation/edit-class-ori
 import { ListarCategoryComponent } from './Category/listar-category/listar-category.component';
 import { AddCategoryComponent } from './Category/add-category/add-category.component';
 import { EditCategoryComponent } from './Category/edit-category/edit-category.component';
+import { ListarSubcategoryComponent } from './Subcategory/listar-subcategory/listar-subcategory.component';
+import { AddSubcategoryComponent } from './Subcategory/add-subcategory/add-subcategory.component';
+import { EditSubcategoryComponent } from './Subcategory/edit-subcategory/edit-subcategory.component';
+import { ListarActivityComponent } from './Activity/listar-activity/listar-activity.component';
+import { AddActivityComponent } from './Activity/add-activity/add-activity.component';
+import { EditActivityComponent } from './Activity/edit-activity/edit-activity.component';
+import { ListarActivityCatalogComponent } from './ActivityCatalog/listar-activity-catalog/listar-activity-catalog.component';
+import { AddActivityCatalogComponent } from './ActivityCatalog/add-activity-catalog/add-activity-catalog.component';
+import { EditActivityCatalogComponent } from './ActivityCatalog/edit-activity-catalog/edit-activity-catalog.component';
+import { AgendaComponent } from './agenda/agenda.component';
 
 
 export const routes: Routes = [
 
     { path: '', component: MenuComponent },
+    {path:'', component: AgendaComponent},
 
     //Campus
     {path: 'listarcampus', component:ListarCampusComponent},
@@ -62,8 +73,22 @@ export const routes: Routes = [
     {path: 'listarcategory', component:ListarCategoryComponent},
     {path: 'addcategory', component:AddCategoryComponent},
     {path:'editcategory', component:EditCategoryComponent},
-    
 
+    //Subcategory
+    {path: 'listarsubcategory', component:ListarSubcategoryComponent},
+    {path: 'addsubcategory', component:AddSubcategoryComponent},
+    {path:'editsubcategory', component:EditSubcategoryComponent},
+
+    //Activity
+    {path: 'listaractivity', component:ListarActivityComponent},
+    {path: 'addactivity', component:AddActivityComponent},
+    {path:'editactivity', component:EditActivityComponent},
+
+    //ActivityCatalog
+    {path:'listaractivitycatalog', component:ListarActivityCatalogComponent},
+    {path:'addactivitycatalog', component:AddActivityCatalogComponent},
+    {path:'editactivitycatalog', component:EditActivityCatalogComponent},
+    
 
 
 ];
