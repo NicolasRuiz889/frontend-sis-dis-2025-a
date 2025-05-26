@@ -1,0 +1,13 @@
+.navbar {
+    background:#213C4A
+
+    
+}
+
+.navbar a {
+    color: #ffffff !important; /* amarillo personalizado */
+  }
+  
+  .navbar a:hover {
+    color: #00cc84 !important; /* blanco al pasar el mouse */
+  }

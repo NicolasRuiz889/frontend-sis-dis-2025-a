@@ -1,0 +1,63 @@
+<div class="container col-md-6 mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Programa</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="">Codigo</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.code" name="code">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Modalidad</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.modality" name="modality">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Jornada</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.schedule" name="schedule">
+                </div>
+                <div class="form-group">
+                    <label for="">Duracion</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.duration" name="duration">
+                </div>
+                <div class="form-group">
+                    <label for="">Titulo que otorga</label>
+                    <input type="text" class="form-control" [(ngModel)]="program.degreeAwarded" name="degreeAwarded">
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="program.status" name="status">
+                        Activa
+                    </label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="faculty">Facultades</label>
+                    <select [(ngModel)]="program.facultyId" name="facultyId" required>
+                        <option [ngValue]="null" disabled selected>Seleccione una Facultad</option>
+                        <option *ngFor="let faculty of faculties" [ngValue]="faculty.id">
+                            {{ faculty.name }}
+                        </option>
+                    </select>
+                </div>
+                <button type="button" (click)="GuardarProgram(program)" class="btn btn-success">Guardar</button>
+            </form>
+
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-4">
+        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
+
+    </div>
+</div>

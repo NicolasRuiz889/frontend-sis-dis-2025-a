@@ -1,0 +1,209 @@
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-plus display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Persona</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <a class="btn btn-success custom-btn-primary btn-sm" [routerLink]="['/addpersona']">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </a>
+                        <a class="btn btn-outline-primary custom-btn-outline btn-sm" [routerLink]="['/listarpersona']">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-gear display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Roles</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-badge display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Agenda</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" [routerLink]="['/addactivity']">
+                            <i class="bi bi-plus-circle me-1"></i> Crear Actividad
+                        </button>
+                        <button class="btn btn-primary custom-btn-primary btn-sm" [routerLink]="['/addclassorientation']">
+                            <i class="bi bi-plus-circle me-1"></i> Crear Orientación
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" [routerLink]="['/agenda']">
+                            <i class="bi bi-list-ul me-1"></i> Listar Todo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-bank display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Facultad</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoFaculty()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarFaculty()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-clipboard2-check display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Programa</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoProgram()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarProgram()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-geo-alt-fill display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Sede</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoCampus()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarCampus()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-journal-bookmark-fill display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Asignatura</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoSubject()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarSubject()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people-fill display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Grupo</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoGroup()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarGroup()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-archive-fill display-4 mb-3 custom-icon-module"></i> <h5 class="card-title">Catálogo de Actividades</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoActivityCatalog()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarActivityCatalog()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-tags-fill display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Categoría</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoCategory()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarCategory()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-list-ul display-4 mb-3 custom-icon-module"></i>
+                    <h5 class="card-title">Subcategoría Actividad</h5>
+                    <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
+                        <button class="btn btn-success custom-btn-primary btn-sm" (click)="nuevoSubcategory()">
+                            <i class="bi bi-plus-circle me-1"></i> Crear
+                        </button>
+                        <button class="btn btn-outline-primary custom-btn-outline btn-sm" (click)="listarSubcategory()">
+                            <i class="bi bi-list-ul me-1"></i> Listar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+</div>

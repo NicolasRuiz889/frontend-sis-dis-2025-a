@@ -1,0 +1,21 @@
+.footer-logo {
+    height: 100px; /* o width: 100px; según necesites */
+    object-fit: contain;
+    margin-right: 15px;
+ 
+  }
+
+  .footer-text {
+    flex-grow: 1;
+    text-align: left; /* Puedes usar right o center si prefieres */
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Imagen a la izquierda */
+  }
+  .footer {
+    background: #213C4A
+
+  }

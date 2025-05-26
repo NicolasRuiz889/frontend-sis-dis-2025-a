@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2 class="text-center">Gestión de Actividades y Orientaciones</h2>
+
+  <div class="d-flex justify-content-center gap-3 my-4">
+    <button class="btn btn-success" [routerLink]="['/addactivity']">
+      <i class="bi bi-plus-circle me-2"></i> Crear Actividad
+    </button>
+    <button class="btn btn-primary" [routerLink]="['/addclassorientation']">
+      <i class="bi bi-plus-circle me-2"></i> Crear Orientación de Clase
+    </button>
+
+    <button class="btn btn-outline-secondary" (click)="exportarExcel()" >
+      <i class="bi bi-file-earmark-excel me-2"></i> Exportar Agenda a Excel
+    </button>
+  </div>
+
+  <hr>
+  <h3>Listado de Orientaciones de Clase</h3>
+  <app-listar-class-orientation></app-listar-class-orientation>
+
+  <hr>
+  <h3>Listado de Actividades</h3>
+  <app-listar-activity></app-listar-activity>
+
+
+</div>
