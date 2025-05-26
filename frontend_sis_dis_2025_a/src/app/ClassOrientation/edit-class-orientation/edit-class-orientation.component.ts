@@ -75,7 +75,7 @@ export class EditClassOrientationComponent implements OnInit {
         })
     } else {
       alert("Error al cargar el ID de la Clase de Orientación");
-      this.router.navigate(["listarclassorientation"]);
+      this.router.navigate(["agenda"]);
     }
   }
 
@@ -87,7 +87,7 @@ export class EditClassOrientationComponent implements OnInit {
     this.classOrientationService.updateClassOrientation(classOrientation)
       .subscribe(() => {
         alert("Actualizado con éxito!");
-        this.router.navigate(["listarclassorientation"]);
+        this.router.navigate(["agenda"]);
       });
 
     }

@@ -1,1 +1,94 @@
-<p>edit-activity works!</p>
+<div class="container col-md-6 mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>Actualizar Actividad</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+
+
+                <div class="form-group mb-4">
+                    <label for="activityCatalog">Catálogo de Actividades</label>
+                    <select [(ngModel)]="activity.activityCatalogId" name="activityCatalogId" class="form-control"
+                        required>
+                        <option [ngValue]="null" disabled>Seleccione una Actividad</option>
+                        <option *ngFor="let catalog of activityCatalog" [ngValue]="catalog.id">
+                            {{ catalog.name }}
+                        </option>
+                    </select>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="">descripcion</label>
+                    <input type="text" class="form-control" [(ngModel)]="activity.description" name="description">
+                </div>
+
+                <!-- Horas semanales -->
+                <div class="form-group">
+                    <label>Horas Semanales</label>
+                    <input type="number" class="form-control" [(ngModel)]="activity.weeklyHours" name="weeklyHours"
+                        required />
+                </div>
+
+                <!-- Horas semestre (calculadas) -->
+                <div class="form-group mb-4">
+                    <label>Horas Semestre</label>
+                    <input type="number" class="form-control" [value]="calculatedSemesterHours" disabled />
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="activity.status" name="status">
+                        Activa
+                    </label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="subcategory">Subcategoria</label>
+                    <select [(ngModel)]="activity.subcategoryId" name="subcategoryId" required>
+                        <option [ngValue]="null" disabled selected>Seleccione una Subcategoria</option>
+                        <option *ngFor="let subcategory of subcategory" [ngValue]="subcategory.id">
+                            {{ subcategory.name }}
+                        </option>
+                    </select>
+                </div>
+
+
+                <h3>Productos</h3>
+
+
+                <div *ngFor="let prod of activity.product; let i = index" class="d-flex align-items-center mb-2 gap-2">
+                    <span class="flex-grow-1">{{ prod.name }}</span>
+
+                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="removeProduct(i)"
+                        title="Eliminar producto" aria-label="Eliminar producto">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>
+
+
+                <div class="form-group mb-4">
+                    <div class="input-group">
+                        <input [(ngModel)]="newProduct.name" name="newProductName" class="form-control"
+                            placeholder="Nombre del producto" />
+
+                        <button type="button" class="btn btn-success" (click)="addProduct()">
+                            <i class="bi bi-plus-circle me-1"></i>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" (click)="ActualizarActivity(activity)" class="btn btn-success">Guardar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center gap-4 mt-3">
+        <button [routerLink]="['/agenda']" class="custom-link-btn">Volver</button>
+    </div>
+
+</div>

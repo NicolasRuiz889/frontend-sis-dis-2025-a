@@ -4,6 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ClassOrientation } from '../../Modelo/ClassOrientation';
 import { ProgramService } from '../../Service/program.service';
+import { ListarActivityComponent } from "../../Activity/listar-activity/listar-activity.component";
 
 @Component({
   standalone: true,
