@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://mi-backend.example.com/api'
+    apiUrl: 'https://back-sis-distribuidos.onrender.com/api'
 };

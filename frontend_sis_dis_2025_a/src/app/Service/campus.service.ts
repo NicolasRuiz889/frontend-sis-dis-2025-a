@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Campus } from '../Modelo/Campus';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,26 +10,26 @@ export class CampusService {
 
   constructor(private http:HttpClient) { }
 
-  Url = 'http://localhost:9000/agendaprofesoral/api/campuses';
+  private baseUrl = environment.apiUrl + '/campuses';
 
   getCampuses(){
-    return this.http.get<Campus[]>(this.Url);
+    return this.http.get<Campus[]>(this.baseUrl);
   }
   
   createCampus(campus:Campus){
-    return this.http.post<Campus>(this.Url,campus);
+    return this.http.post<Campus>(this.baseUrl,campus);
 
   }
 
   getCampusId(id:number){
-    return this.http.get<Campus>(this.Url+"/"+id);
+    return this.http.get<Campus>(this.baseUrl+"/"+id);
 
   }
   updateCampus(campus:Campus){
-    return this.http.put<Campus>(this.Url+"/"+campus.id,campus);
+    return this.http.put<Campus>(this.baseUrl+"/"+campus.id,campus);
   }
 
   deleteCampus(campus:Campus){
-    return this.http.delete<Campus>(this.Url+"/"+campus.id);
+    return this.http.delete<Campus>(this.baseUrl+"/"+campus.id);
   }
 }

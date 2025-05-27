@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subcategory } from '../Modelo/Subcategory';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,27 +10,26 @@ export class SubcategoryService {
 
   constructor(private http:HttpClient) { }
 
-  Url = 'http://localhost:9000/agendaprofesoral/api/subcategories';
+  private baseUrl = environment.apiUrl + '/subcategories';
+
+  getSubcategory(){
+    return this.http.get<Subcategory[]>(this.baseUrl);
+  }
   
-    
-      getSubcategory(){
-        return this.http.get<Subcategory[]>(this.Url);
-      }
-      
-      createSubcategory(SubcategoryDto: any){
-        return this.http.post<Subcategory>(this.Url,SubcategoryDto);
-    
-      }
-    
-      getSubcategoryById(id:number){
-        return this.http.get<Subcategory>(this.Url+"/"+id);
-    
-      }
-      updateSubcategory(subcategory:Subcategory){
-        return this.http.put<Subcategory>(this.Url+"/"+subcategory.id,subcategory);
-      }
-    
-      deleteSubcategory(subcategory:Subcategory){
-        return this.http.delete<Subcategory>(this.Url+"/"+subcategory.id);
-      }
+  createSubcategory(SubcategoryDto: any){
+    return this.http.post<Subcategory>(this.baseUrl,SubcategoryDto);
+
+  }
+
+  getSubcategoryById(id:number){
+    return this.http.get<Subcategory>(this.baseUrl+"/"+id);
+
+  }
+  updateSubcategory(subcategory:Subcategory){
+    return this.http.put<Subcategory>(this.baseUrl+"/"+subcategory.id,subcategory);
+  }
+
+  deleteSubcategory(subcategory:Subcategory){
+    return this.http.delete<Subcategory>(this.baseUrl+"/"+subcategory.id);
+  }
 }

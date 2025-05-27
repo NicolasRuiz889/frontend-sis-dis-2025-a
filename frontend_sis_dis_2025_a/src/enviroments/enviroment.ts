@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: '/api'    // coincide con la ruta proxy
+    apiUrl: 'https://back-sis-distribuidos.onrender.com/api'
 }; 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Group } from '../Modelo/Group';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,27 +10,26 @@ export class GroupService {
 
   constructor(private http:HttpClient) { }
 
+  private baseUrl = environment.apiUrl + '/groups';
 
-  Url = 'http://localhost:9000/agendaprofesoral/api/groups';
+  getGroups(){
+    return this.http.get<Group[]>(this.baseUrl);
+  }
   
-    getGroups(){
-          return this.http.get<Group[]>(this.Url);
-        }
-        
-        createGroup(GroupDto: any){
-          return this.http.post<Group>(this.Url,GroupDto);
-      
-        }
-      
-        getGroupId(id:number){
-          return this.http.get<Group>(this.Url+"/"+id);
-      
-        }
-        updateGroup(group:Group){
-          return this.http.put<Group>(this.Url+"/"+group.id,group);
-        }
-      
-        deleteGroup(group:Group){
-          return this.http.delete<Group>(this.Url+"/"+group.id);
-        }
+  createGroup(GroupDto: any){
+    return this.http.post<Group>(this.baseUrl,GroupDto);
+
+  }
+
+  getGroupId(id:number){
+    return this.http.get<Group>(this.baseUrl+"/"+id);
+
+  }
+  updateGroup(group:Group){
+    return this.http.put<Group>(this.baseUrl+"/"+group.id,group);
+  }
+
+  deleteGroup(group:Group){
+    return this.http.delete<Group>(this.baseUrl+"/"+group.id);
+  }
 }
