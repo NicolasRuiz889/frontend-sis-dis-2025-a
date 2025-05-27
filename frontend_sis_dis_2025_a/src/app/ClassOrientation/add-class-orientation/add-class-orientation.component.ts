@@ -68,15 +68,13 @@ export class AddClassOrientationComponent implements OnInit {
       return;
     }
 
-    delete classOrientation.semesterHours;
-
-
+    classOrientation.semesterHours = this.calculatedSemesterHours;
     
-  this.classOrientationService.createClassOrientation(classOrientation)
-  .subscribe(data => {
-    alert("Se agregó con éxito.");
-    this.router.navigate(["listaclassorientation"]);
-  });
+    this.classOrientationService.createClassOrientation(classOrientation)
+    .subscribe(data => {
+      alert("Se agregó con éxito.");
+      this.router.navigate(["listaclassorientation"]);
+    });
 
   }
 

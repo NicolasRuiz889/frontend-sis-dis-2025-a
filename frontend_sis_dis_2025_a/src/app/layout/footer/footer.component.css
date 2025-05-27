@@ -1,9 +1,8 @@
 .footer-logo {
-    height: 100px; /* o width: 100px; según necesites */
-    object-fit: contain;
-    margin-right: 15px;
- 
-  }
+  height: 100px;
+  object-fit: contain;
+  margin-right: 15px;
+}
 
   .footer-text {
     flex-grow: 1;
@@ -16,6 +15,10 @@
     justify-content: flex-start; /* Imagen a la izquierda */
   }
   .footer {
-    background: #213C4A
-
-  }
+  background: #213C4A;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  /* Opcional para que siempre esté en la parte inferior */
+  /* Pero con flex layout no es necesario usar position fixed */
+}

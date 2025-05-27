@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <form>
-                
+
                 <div class="form-group">
                     <label for="">Nombre</label>
                     <input type="text" class="form-control" [(ngModel)]="subcategory.name" name="name">
@@ -15,33 +15,35 @@
                     <input type="text" class="form-control" [(ngModel)]="subcategory.description" name="description">
                 </div>
 
-                <div class="form-group">
+                <div class="check form-group">
                     <label>
                         <input type="checkbox" [(ngModel)]="subcategory.status" name="status">
                         Activa
                     </label>
                 </div>
 
-                <div class="form-group mb-4">
+                <div class="selects form-group mb-4">
                     <label for="campus">Categoria</label>
-                    <select [(ngModel)]="subcategory.categoryId" name="categoryId" required>
+                    <select [(ngModel)]="subcategory.categoryId" name="categoryId" id="catefory"
+                        class="form-select form-select-lg" required>
                         <option [ngValue]="null" disabled selected>Seleccione una Categoria</option>
                         <option *ngFor="let category of categories" [ngValue]="category.id">
                             {{ category.name }}
                         </option>
                     </select>
                 </div>
-                <button type="button" (click)="GuardarSubcategory(subcategory)" class="btn btn-success">Guardar</button>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+                    <button type="button" (click)="GuardarSubcategory(subcategory)"
+                        class="btn btn-success">Guardar</button>
+                    <button [routerLink]="['/']" class="btn btn-outline-secondary btn-lg custom-btn-volver">
+                        <i class="bi bi-arrow-left-circle me-2"></i> Volver
+                    </button>
+                </div>
             </form>
 
             <div>
 
             </div>
         </div>
-    </div>
-
-    <div class="d-flex justify-content-center gap-4">
-        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
-
     </div>
 </div>

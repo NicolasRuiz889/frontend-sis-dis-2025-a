@@ -1,0 +1,28 @@
+.container {
+  min-height: calc(100vh - 302px);
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex-grow: 1;
+}
+
+.custom-btn-volver {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background-color: #aab604;
+  border-color: #aab604;
+  color: white;
+}
+
+.custom-btn-volver:hover {
+  background-color: #b9c513;
+  color: white;
+  box-shadow: 0 4px 12px rgba(150, 219, 2, 0.5);
+  border-color: #b9c513;
+  cursor: pointer;
+}

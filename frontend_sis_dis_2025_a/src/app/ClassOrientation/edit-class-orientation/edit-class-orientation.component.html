@@ -1,4 +1,3 @@
-
 <div class="container col-md-6 mt-5">
     <div class="card">
         <div class="card-header">
@@ -52,16 +51,19 @@
                 <!-- Horas semestre (calculadas) -->
                 <div class="form-group mb-4">
                     <label>Horas Semestre</label>
-                    <input type="number" class="form-control" [value]="calculatedSemesterHours" readonly  />
+                    <input type="number" class="form-control" [value]="calculatedSemesterHours" readonly />
                 </div>
 
-                <button type="button" class="btn btn-success" (click)="ActualizarClassOrientation(classOrientation)">Guardar</button>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+                    <button type="button" class="btn btn-success"
+                        (click)="ActualizarClassOrientation(classOrientation)">Guardar</button>
+
+                    <button [routerLink]="['/']" class="btn btn-outline-secondary btn-lg custom-btn-volver">
+                        <i class="bi bi-arrow-left-circle me-2"></i> Volver
+                    </button>
+                </div>
             </form>
         </div>
-    </div>
-
-    <div class="d-flex justify-content-center gap-4 mt-3">
-        <button [routerLink]="['/agenda']" class="custom-link-btn">Volver</button>
     </div>
 
 </div>

@@ -1,4 +1,3 @@
-
 <div class="container col-md-6 mt-5">
     <div class="card">
         <div class="card-header">
@@ -24,7 +23,12 @@
                         Activa
                     </label>
                 </div>
-                <button type="button" (click)="GuardarCampus(campus)" class="btn btn-success">Guardar</button>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+                    <button type="button" (click)="GuardarCampus(campus)" class="btn btn-success">Guardar</button>
+                    <button [routerLink]="['/']" class="btn btn-outline-secondary btn-lg custom-btn-volver">
+                        <i class="bi bi-arrow-left-circle me-2"></i> Volver
+                    </button>
+                </div>
             </form>
 
             <div>
@@ -37,9 +41,4 @@
         </div>
     </div>
 
-    <br>
-    <div class="d-flex justify-content-center gap-4">
-        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
-
-    </div>
 </div>

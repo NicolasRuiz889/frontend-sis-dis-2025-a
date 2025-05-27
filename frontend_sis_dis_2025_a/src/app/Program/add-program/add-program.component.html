@@ -31,7 +31,7 @@
                     <input type="text" class="form-control" [(ngModel)]="program.degreeAwarded" name="degreeAwarded">
                 </div>
 
-                <div class="form-group">
+                <div class="check form-group">
                     <label>
                         <input type="checkbox" [(ngModel)]="program.status" name="status">
                         Activa
@@ -40,14 +40,21 @@
 
                 <div class="form-group mb-4">
                     <label for="faculty">Facultades</label>
-                    <select [(ngModel)]="program.facultyId" name="facultyId" required>
+                    <select [(ngModel)]="program.facultyId" name="facultyId" id="faculty"
+                        class="form-select form-select-lg" required>
                         <option [ngValue]="null" disabled selected>Seleccione una Facultad</option>
                         <option *ngFor="let faculty of faculties" [ngValue]="faculty.id">
                             {{ faculty.name }}
                         </option>
                     </select>
                 </div>
-                <button type="button" (click)="GuardarProgram(program)" class="btn btn-success">Guardar</button>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+                    <button type="button" (click)="GuardarProgram(program)" class="btn btn-success">Guardar</button>
+
+                    <button [routerLink]="['/']" class="btn btn-outline-secondary btn-lg custom-btn-volver">
+                        <i class="bi bi-arrow-left-circle me-2"></i> Volver
+                    </button>
+                </div>
             </form>
 
             <div>
@@ -56,8 +63,4 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-center gap-4">
-        <button [routerLink]="['/']" class="custom-link-btn">Volver</button>
-
-    </div>
 </div>
